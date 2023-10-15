@@ -8,15 +8,14 @@ import Header from "../components/Header";
 import AcercaDeMi from "../components/AcercaDeMi";
 import Formulario from "../components/Formulario";
 
-function Home() {
+function Contacto() {
   return (
    <div>
-    <Header/>
-    <AcercaDeMi/>
+   
     <Formulario/>
       </div>
       
   );
 }
 
-export default Home;
+export default Contacto;
