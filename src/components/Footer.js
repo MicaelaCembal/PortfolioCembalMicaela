@@ -13,19 +13,18 @@ function Footer() {
       <div className="container px-5">
         <div className="row align-items-center justify-content-between flex-column flex-sm-row">
           <div className="col-auto">
-            <div className="small m-0">Copyright &copy; Your Website 2023</div>
+            <div className="small m-0">Copyright &copy;  2023 Micaela Cembal. Todos los derechos reservados</div>
           </div>
           <div className="col-auto">
-            {/* Usando Link en lugar de <a> para las rutas */}
-            <Link to="/privacy" className="small mx-1">
+            <Link to="/" className="small mx-1">
               Privacy
             </Link>
             <span className="mx-1">&middot;</span>
-            <Link to="/terms" className="small mx-1">
+            <Link to="/" className="small mx-1">
               Terms
             </Link>
             <span className="mx-1">&middot;</span>
-            <Link to="/contact" className="small mx-1">
+            <Link to="/contacto" className="small mx-1">
               Contact
             </Link>
           </div>

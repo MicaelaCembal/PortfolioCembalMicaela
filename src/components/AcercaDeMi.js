@@ -19,16 +19,26 @@ function AcercaDeMi() {
                   <p className="lead fw-light mb-4">My name is Start Bootstrap and I help brands grow.</p>
                   <p className="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit dolorum itaque qui unde quisquam consequatur autem. Eveniet quasi nobis aliquid cumque officiis sed rem iure ipsa! Praesentium ratione atque dolorem?</p>
                   <div className="d-flex justify-content-center fs-2 gap-4">
-                    <a className="text-gradient" href="#!"><i className="bi bi-twitter"></i></a>
-                    <a className="text-gradient" href="#!"><i className="bi bi-linkedin"></i></a>
-                    <a className="text-gradient" href="#!"><i className="bi bi-github"></i></a>
+                    <div className="d-flex justify-content-center fs-2 gap-4">
+                      <a href="https://www.twitter.com/" className="text-gradient" target="_blank" rel="noopener noreferrer">
+                        <i className="bi bi-twitter"></i>
+                      </a>
+                      <a href="https://www.linkedin.com/in/micaelacembal/" className="text-gradient" target="_blank" rel="noopener noreferrer">
+                        <i className="bi bi-linkedin"></i>
+                      </a>
+                      <a href="https://github.com/MicaelaCembal" className="text-gradient" target="_blank" rel="noopener noreferrer">
+                        <i className="bi bi-github"></i>
+                      </a>
+                    </div>
+
+
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </section>
-    </div>
+      </div>
     </div>
 
   );

@@ -7,12 +7,14 @@ import "../styles/styles.css";
 import Header from "../components/Header";
 import AcercaDeMi from "../components/AcercaDeMi";
 import Formulario from "../components/Formulario";
+import Skills from "../components/Skills";
 
 function Home() {
   return (
    <div>
     <Header/>
     <AcercaDeMi/>
+     {/* <Skills/>*/} 
     <Formulario/>
       </div>
       

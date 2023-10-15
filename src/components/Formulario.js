@@ -10,7 +10,6 @@ import AcercaDeMi from "../components/AcercaDeMi";
 function Formulario() {
     return (
         <div>
-            {/* Contact form */}
             <div className="bg-light rounded-4 py-5 px-4 px-md-5">
                 <div className="text-center mb-5">
                     <div className="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 mb-3">
@@ -21,13 +20,7 @@ function Formulario() {
                 </div>
                 <div className="row gx-5 justify-content-center">
                     <div className="col-lg-8 col-xl-6">
-                        {/* SB Forms Contact Form */}
-                        {/* This form is pre-integrated with SB Forms. */}
-                        {/* To make this form functional, sign up at */}
-                        {/* https://startbootstrap.com/solution/contact-forms */}
-                        {/* to get an API token! */}
                         <form id="contactForm" data-sb-form-api-token="API_TOKEN">
-                            {/* Name input */}
                             <div className="form-floating mb-3">
                                 <input
                                     className="form-control"
@@ -41,7 +34,6 @@ function Formulario() {
                                     A name is required.
                                 </div>
                             </div>
-                            {/* Email address input */}
                             <div className="form-floating mb-3">
                                 <input
                                     className="form-control"
@@ -58,7 +50,6 @@ function Formulario() {
                                     Email is not valid.
                                 </div>
                             </div>
-                            {/* Phone number input */}
                             <div className="form-floating mb-3">
                                 <input
                                     className="form-control"
@@ -72,7 +63,6 @@ function Formulario() {
                                     A phone number is required.
                                 </div>
                             </div>
-                            {/* Message input */}
                             <div className="form-floating mb-3">
                                 <textarea
                                     className="form-control"
@@ -87,7 +77,6 @@ function Formulario() {
                                     A message is required.
                                 </div>
                             </div>
-                            {/* Submit success message */}
                             <div className="d-none" id="submitSuccessMessage">
                                 <div className="text-center mb-3">
                                     <div className="fw-bolder">Form submission successful!</div>
@@ -98,11 +87,9 @@ function Formulario() {
                                     </a>
                                 </div>
                             </div>
-                            {/* Submit error message */}
                             <div className="d-none" id="submitErrorMessage">
                                 <div className="text-center text-danger mb-3">Error sending message!</div>
                             </div>
-                            {/* Submit Button */}
                             <div className="d-grid">
                                 <button className="btn btn-primary btn-lg disabled" id="submitButton" type="submit">
                                     Submit

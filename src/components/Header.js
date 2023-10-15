@@ -20,19 +20,19 @@ function Header() {
                                     <span className="text-gradient d-inline">Get online and grow fast</span>
                                 </h1>
                                 <div className="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xxl-start mb-3">
-                                    <a className="btn btn-primary btn-lg px-5 py-3 me-sm-3 fs-6 fw-bolder" href="resume.html">
-                                        Resume
-                                    </a>
-                                    <a className="btn btn-outline-dark btn-lg px-5 py-3 fs-6 fw-bolder" href="projects.html">
-                                        Projects
-                                    </a>
+                                    <Link to="/resumeN" className="btn btn-primary btn-lg px-5 py-3 me-sm-3 fs-6 fw-bolder">
+                                        Resumen
+                                    </Link>
+                                    <Link to="/proyectos" className="btn btn-outline-dark btn-lg px-5 py-3 fs-6 fw-bolder">
+                                        Proyectos
+                                    </Link>
                                 </div>
                             </div>
                         </div>
                         <div className="col-xxl-7">
                             <div className="d-flex justify-content-center mt-5 mt-xxl-0">
                                 <div className="profile bg-gradient-primary-to-secondary">
-                                <img className="profile-img" src="./fotoMica.jpg" alt="..." />
+                                    <img className="profile-img" src="" alt="..." />
                                     <div className="dots-1">
                                         <svg
                                             version="1.1"
@@ -91,6 +91,6 @@ function Header() {
                 </div>
             </header>
         </>
-          );
-        }
+    );
+}
 export default Header; 

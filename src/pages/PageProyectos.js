@@ -67,7 +67,7 @@ const PageProyectos = () => {
             </h2>
             <Link
               className="btn btn-outline-light btn-lg px-5 py-3 fs-6 fw-bolder"
-              to="/contact"
+              to="/contacto"
             >
               Contact me
             </Link>
