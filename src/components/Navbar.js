@@ -8,9 +8,6 @@ function Navbar() {
   const [expandNavbar, setExpandNavbar] = useState(false);
   const location = useLocation();
 
-  useEffect(() => {
-    setExpandNavbar(false);
-  }, [location]);
 
   return (
     <div>
@@ -27,7 +24,6 @@ function Navbar() {
             aria-controls="navbarSupportedContent"
             aria-expanded="false"
             aria-label="Toggle navigation"
-            onClick={() => setExpandNavbar(!expandNavbar)}
           >
             <ReorderIcon />
           </button>
@@ -51,6 +47,11 @@ function Navbar() {
               <li className="nav-item">
                 <NavLink className="nav-link" to="/contacto">
                   Contacto
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/favoritos">
+                  Favoritos
                 </NavLink>
               </li>
             </ul>

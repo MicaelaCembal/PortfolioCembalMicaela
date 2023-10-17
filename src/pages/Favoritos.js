@@ -7,20 +7,14 @@ import "../styles/styles.css";
 import Header from "../components/Header";
 import AcercaDeMi from "../components/AcercaDeMi";
 import Formulario from "../components/Formulario";
-import Skills from "../components/Skills";
-import ProyectosDestacados from "../components/ProyectosDestacados";
 
-function Home() {
+function Favoritos() {
   return (
    <div>
-    <Header/>
-    <AcercaDeMi/>
-     {/* <Skills/>*/} 
-     <ProyectosDestacados/>
-    <Formulario/>
+    
       </div>
       
   );
 }
 
-export default Home;
+export default Favoritos;

@@ -3752,6 +3752,7 @@ textarea.form-control-lg {
   align-items: center;
   justify-content: space-between;
   padding: var(--bs-navbar-padding-y) var(--bs-navbar-padding-x);
+  
 }
 .navbar > .container,
 .navbar > .container-fluid,
@@ -11731,4 +11732,53 @@ html {
     width: 1.5vw;
     left: -2vw;
   }
+}
+
+
+/*FAVORITOS*/
+.cardsContainer {
+  display: flex;
+  justify-content: space-between; /* Para distribuir las tarjetas uniformemente en el contenedor */
+}
+
+.cardPrincipal {
+  width: 300px;
+  height: 150px;
+  background-color: white;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  margin: 20px;
+}
+
+.cardPrincipal-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.cardPrincipal-button:hover {
+  background-color: #0056b3;
+}
+
+.cardPrincipal-button:focus {
+  outline: none;
+}
+.cardPrincipal-button {
+  background: linear-gradient(to right, var(--bs-blue), var(--bs-indigo), var(--bs-purple), var(--bs-pink));
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.cardPrincipal-button:hover {
+  /* Establece un color diferente cuando el botón está en estado hover si lo deseas */
 }

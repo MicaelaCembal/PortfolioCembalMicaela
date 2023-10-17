@@ -6,6 +6,7 @@ import PageProyectos from "./pages/PageProyectos";
 import Experiencia from "./pages/Experiencia";
 import Resumen from "./pages/Resumen";
 import Contacto from "./pages/Contacto";
+import Favoritos from "./pages/Favoritos";
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
           <Route path="/experiencia" element={<Layout><Experiencia /></Layout>} />
           <Route path="/resumen" element={<Layout><Resumen /></Layout>} />
           <Route path="/contacto" element={<Layout><Contacto /></Layout>} />
-
+          <Route path="/favoritos" element={<Layout><Favoritos /></Layout>} />
         </Routes>
       </Router>
     </div>
