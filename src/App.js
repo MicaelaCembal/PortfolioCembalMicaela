@@ -7,6 +7,7 @@ import Experiencia from "./pages/Experiencia";
 import Resumen from "./pages/Resumen";
 import Contacto from "./pages/Contacto";
 import Favoritos from "./pages/Favoritos";
+import DetalleProyecto from "./components/DetalleProyectos";
 
 function App() {
   return (
@@ -19,6 +20,8 @@ function App() {
           <Route path="/resumen" element={<Layout><Resumen /></Layout>} />
           <Route path="/contacto" element={<Layout><Contacto /></Layout>} />
           <Route path="/favoritos" element={<Layout><Favoritos /></Layout>} />
+          <Route path="/proyectos/:id" element={<Layout><DetalleProyecto/></Layout>} />
+
         </Routes>
       </Router>
     </div>

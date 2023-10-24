@@ -86,3 +86,12 @@
     flex-direction: row;
   }
 }
+
+.navbar-nav .nav-link {
+  color: black !important; 
+  text-decoration: none !important;
+}
+
+.navbar-nav .nav-link.active {
+  color: black !important; 
+}
