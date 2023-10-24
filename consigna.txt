@@ -10,7 +10,7 @@ USAR ESTO EN VEZ DE SOLO NPM I: npm install --legacy-peer-deps
             el cual deberá estar ubicado en el footer. 
             Usen un form de bootstrap, pero si quieren algo más pueden usar
             https://formik.org/ o https://react-hook-form.com/get-started . 
-            Tambien, agregar info a las redes sociales que desen como su perfil de LinkedIn.
+            Tambien, agregar info a las redes sociales que desen como su perfil de LinkedIn. 
 
             - Las creaciones se deben obtener mediante axios pegandole a un JSON de objetos 
             guardado en un archivo local, donde cada uno tenga info al respecto: 
