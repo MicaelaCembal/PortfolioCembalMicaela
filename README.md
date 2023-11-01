@@ -32,7 +32,7 @@ Created something awesome for your fork of the portfolio and want to share it? F
 ## Portfolio Sections
 ✔️ Summary and About me\
 ✔️ Skills\
-✔️ Education\
+✔️ Educacion\
 ✔️ Work Experience\
 ✔️ Open Source Projects Connected with GitHub\
 ✔️ Big Projects\

@@ -2,11 +2,14 @@ import React from "react";
 import { BrowserRouter } from "react-router-dom";
 import "./App.scss";
 import Main from "./containers/Main";
+import { FavoritesProvider } from "./context/FavoritesProvider";
 
 const App = () => {
   return (
     <BrowserRouter>
-      <Main />
+      <FavoritesProvider>
+        <Main />
+      </FavoritesProvider>
     </BrowserRouter>
   );
 };

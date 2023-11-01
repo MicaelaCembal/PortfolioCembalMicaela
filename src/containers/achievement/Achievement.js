@@ -1,57 +1,26 @@
-import React, {useContext} from "react";
-import "./Achievement.scss";
+import React, { useState } from "react";
 import AchievementCard from "../../components/achievementCard/AchievementCard";
-import {achievementSection} from "../../portfolio";
-import {Fade} from "react-reveal";
-import StyleContext from "../../contexts/StyleContext";
-export default function Achievement() {
-  const {isDark} = useContext(StyleContext);
-  if (!achievementSection.display) {
-    return null;
-  }
+
+export default function Achievement({ achievements }) {
+  const [favorites, setFavorites] = useState([]);
+
+  const toggleFavorite = (id, isFavorite) => {
+    if (isFavorite) {
+      setFavorites(favorites.filter((favoriteId) => favoriteId !== id));
+    } else {
+      setFavorites([...favorites, id]);
+    }
+  };
+
   return (
-    <Fade bottom duration={1000} distance="20px">
-      <div className="main" id="achievements">
-        <div className="achievement-main-div">
-          <div className="achievement-header">
-            <h1
-              className={
-                isDark
-                  ? "dark-mode heading achievement-heading"
-                  : "heading achievement-heading"
-              }
-            >
-              {achievementSection.title}
-            </h1>
-            <p
-              className={
-                isDark
-                  ? "dark-mode subTitle achievement-subtitle"
-                  : "subTitle achievement-subtitle"
-              }
-            >
-              {achievementSection.subtitle}
-            </p>
-          </div>
-          <div className="achievement-cards-div">
-            {achievementSection.achievementsCards.map((card, i) => {
-              return (
-                <AchievementCard
-                  key={i}
-                  isDark={isDark}
-                  cardInfo={{
-                    title: card.title,
-                    description: card.subtitle,
-                    image: card.image,
-                    imageAlt: card.imageAlt,
-                    footer: card.footerLink
-                  }}
-                />
-              );
-            })}
-          </div>
-        </div>
-      </div>
-    </Fade>
+    <div className="achievements-container">
+      {achievements.map((achievement) => (
+        <AchievementCard
+          key={achievement.id}
+          achievement={achievement}
+          onToggleFavorite={toggleFavorite}
+        />
+      ))}
+    </div>
   );
 }

@@ -41,17 +41,17 @@ function Header() {
         <ul className={isDark ? "dark-menu menu" : "menu"}>
           {viewSkills && (
             <li>
-              <a href="#skills">Skills</a>
+              <a href="#skills">Aptitudes</a>
             </li>
           )}
           {viewExperience && (
             <li>
-              <a href="#experience">Work Experiences</a>
+              <a href="#experience">Experiencia</a>
             </li>
           )}
           {viewAchievement && (
             <li>
-              <a href="#achievements">Achievements</a>
+              <a href="#achievements">Reconocimientos</a>
             </li>
           )}
           {viewBlog && (
@@ -59,14 +59,14 @@ function Header() {
               <a href="#blogs">Blogs</a>
             </li>
           )}
-          {viewTalks && (
-            <li>
-              <a href="#talks">Talks</a>
-            </li>
-          )}
           <li>
-            <a href="#contact">Contact Me</a>
+            <a href="#contact">Contacto</a>
           </li>
+          <li>
+    <a href="#favorites">
+      <span className="badge">Favoritos</span> {/* Agrega este span para el badge */}
+    </a>
+  </li>
           <li>
             {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
             <a>

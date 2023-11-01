@@ -4,6 +4,7 @@
 
 import emoji from "react-easy-emoji";
 import splashAnimation from "./assets/lottie/splashAnimation"; // Rename to your file name for custom animation
+import proyectosJson from "./proyectos.json";
 
 // Splash Screen
 
@@ -21,9 +22,9 @@ const illustration = {
 
 const greeting = {
   username: "Micaela Cembal",
-  title: "¡Bienvenido a mi Portfolio! Soy Micaela Cembal",
+  title: "¡Bienvenidos a mi portfolio!",
   subTitle: emoji(
-    "Una apasionada desarrolladora de software 🚀 con proyectos en la creación de aplicaciones web y móviles mediante diferentes librerías y frameworks"
+    "Una apasionada desarrolladora de software 🚀 con experiencia en la creación de aplicaciones móviles y web mediante diferentes librerías y frameworks"
   ),
   resumeLink:
     "https://drive.google.com/file/d/1ofFdKF_mqscH8WvXkSObnVvC9kK7Ldlu/view?usp=sharing", // Set to empty to hide the button
@@ -110,11 +111,6 @@ const educationInfo = {
       logo: require("./assets/images/uadeLogo.png"),
       subHeader: "Ingenieria en Informatica",
       duration: "Marzo 2024 - Diciembre 2028",
-      desc: "Participated in the research of XXX and published 3 papers.",
-      descBullets: [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
-      ]
     },
     {
       schoolName: "ORT Argentina",
@@ -122,7 +118,7 @@ const educationInfo = {
       subHeader: "Bachillerato con certificación jurisdiccional en Diseño y Desarrollo de Aplicaciones Web y Móviles.",
       duration: "Marzo 2019 - Diciembre 2023",
       desc: "Alumna destacada dentro de los mejores tres promedios de la orientación.",
-      descBullets: ["Lorem ipsum dolor sit amet, consectetur adipiscing elit"]
+      descBullets: ["Proyecto final destacado: DONAR+: una plataforma web que ofrece nuevas oportunidades para realizar donaciones de manera segura, fácil y con confianza. La misma surge frente a la necesidad de 18 millones de personas en la Argentina viviendo en la pobreza y que las organizaciones sin fines de lucro no pueden satisfacer la gran demanda de necesidades que estas personas requieren para acceder a una vida mejor. "]
     }
   ]
 };
@@ -195,32 +191,19 @@ const openSource = {
 const bigProjects = {
   title: "Big Projects",
   subtitle: "SOME STARTUPS AND COMPANIES THAT I HELPED TO CREATE THEIR TECH",
-  projects: [
-    {
-      image: require("./assets/images/saayaHealthLogo.webp"),
-      projectName: "Saayahealth",
-      projectDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-      footerLink: [
-        {
-          name: "Visit Website",
-          url: "http://saayahealth.com/"
-        }
-        //  you can add extra buttons here.
-      ]
-    },
-    {
-      image: require("./assets/images/nextuLogo.webp"),
-      projectName: "Nextu",
-      projectDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-      footerLink: [
-        {
-          name: "Visit Website",
-          url: "http://nextu.se/"
-        }
-      ]
-    }
-  ],
-  display: true // Set false to hide this section, defaults to true
+  projects: proyectosJson.map(item => ({
+    image: item.images[0],
+    projectName: item.title,
+    projectDesc: item.description,
+    footerLink: [
+      {
+        name: "Visit Website",
+        url: item.url
+      }
+      // Puedes agregar botones adicionales aquí si es necesario.
+    ]
+  })),
+  display: true // Establece en false para ocultar esta sección, el valor predeterminado es true
 };
 
 // Achievement Section
@@ -233,56 +216,19 @@ const achievementSection = {
 
   achievementsCards: [
     {
-      title: "Google Code-In Finalist",
-      subtitle:
-        "First Pakistani to be selected as Google Code-in Finalist from 4000 students from 77 different countries.",
-      image: require("./assets/images/codeInLogo.webp"),
-      imageAlt: "Google Code-In Logo",
-      footerLink: [
-        {
-          name: "Certification",
-          url: "https://drive.google.com/file/d/0B7kazrtMwm5dYkVvNjdNWjNybWJrbndFSHpNY2NFV1p4YmU0/view?usp=sharing"
-        },
-        {
-          name: "Award Letter",
-          url: "https://drive.google.com/file/d/0B7kazrtMwm5dekxBTW5hQkg2WXUyR3QzQmR0VERiLXlGRVdF/view?usp=sharing"
-        },
-        {
-          name: "Google Code-in Blog",
-          url: "https://opensource.googleblog.com/2019/01/google-code-in-2018-winners.html"
-        }
-      ]
+        id: 1,
+        title: "Google Code-In Finalist",
+        subtitle:
+          "First Pakistani to be selected as Google Code-in Finalist from 4000 students from 77 different countries.",
+        image: require("./assets/images/codeInLogo.webp"),
+        imageAlt: "Google Code-In Logo",
+        isFavorite: false // Nuevo campo para indicar si el logro está en favoritos o no
     },
-    {
-      title: "Google Assistant Action",
-      subtitle:
-        "Developed a Google Assistant Action JavaScript Guru that is available on 2 Billion devices world wide.",
-      image: require("./assets/images/googleAssistantLogo.webp"),
-      imageAlt: "Google Assistant Action Logo",
-      footerLink: [
-        {
-          name: "View Google Assistant Action",
-          url: "https://assistant.google.com/services/a/uid/000000100ee688ee?hl=en"
-        }
-      ]
-    },
-
-    {
-      title: "PWA Web App Developer",
-      subtitle: "Completed Certifcation from SMIT for PWA Web App Development",
-      image: require("./assets/images/pwaLogo.webp"),
-      imageAlt: "PWA Logo",
-      footerLink: [
-        {name: "Certification", url: ""},
-        {
-          name: "Final Project",
-          url: "https://pakistan-olx-1.firebaseapp.com/"
-        }
-      ]
-    }
+    // Otros logros...
   ],
   display: true // Set false to hide this section, defaults to true
 };
+
 
 // Blogs Section
 
