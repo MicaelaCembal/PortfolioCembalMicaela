@@ -1,20 +1,23 @@
-import React, {useContext} from "react";
+import React, { useContext } from "react";
 import Headroom from "react-headroom";
 import "./Header.scss";
 import ToggleSwitch from "../ToggleSwitch/ToggleSwitch";
 import StyleContext from "../../contexts/StyleContext";
+import { useFavorites } from "../../context/FavoritesContext";
 import {
   greeting,
   workExperiences,
   skillsSection,
-  openSource,
+  achievementSection,
   blogSection,
   talkSection,
-  achievementSection
+  openSource,
 } from "../../portfolio";
 
 function Header() {
-  const {isDark} = useContext(StyleContext);
+  const { isDark } = useContext(StyleContext);
+  const { favoriteCount } = useFavorites();
+
   const viewExperience = workExperiences.display;
   const viewOpenSource = openSource.display;
   const viewSkills = skillsSection.display;
@@ -34,7 +37,7 @@ function Header() {
         <label
           className="menu-icon"
           htmlFor="menu-btn"
-          style={{color: "white"}}
+          style={{ color: "white" }}
         >
           <span className={isDark ? "navicon navicon-dark" : "navicon"}></span>
         </label>
@@ -59,16 +62,20 @@ function Header() {
               <a href="#blogs">Blogs</a>
             </li>
           )}
+          {viewTalks && (
+            <li>
+              <a href="#talks">Charlas</a>
+            </li>
+          )}
           <li>
             <a href="#contact">Contacto</a>
           </li>
           <li>
-    <a href="#favorites">
-      <span className="badge">Favoritos</span> {/* Agrega este span para el badge */}
-    </a>
-  </li>
+            <a href="#favorites">
+              <span className="badge">{favoriteCount}</span>
+            </a>
+          </li>
           <li>
-            {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
             <a>
               <ToggleSwitch />
             </a>
@@ -78,4 +85,5 @@ function Header() {
     </Headroom>
   );
 }
+
 export default Header;

@@ -224,11 +224,39 @@ const achievementSection = {
         imageAlt: "Google Code-In Logo",
         isFavorite: false // Nuevo campo para indicar si el logro está en favoritos o no
     },
+    {
+      id: 2,
+      title: "Google Code-In Finalist",
+      subtitle:
+        "First Pakistani to be selected as Google Code-in Finalist from 4000 students from 77 different countries.",
+      image: require("./assets/images/codeInLogo.webp"),
+      imageAlt: "Google Code-In Logo",
+      isFavorite: false // Nuevo campo para indicar si el logro está en favoritos o no
+  },
+  {
+    id: 3,
+    title: "Google Code-In Finalist",
+    subtitle:
+      "First Pakistani to be selected as Google Code-in Finalist from 4000 students from 77 different countries.",
+    image: require("./assets/images/codeInLogo.webp"),
+    imageAlt: "Google Code-In Logo",
+    isFavorite: false // Nuevo campo para indicar si el logro está en favoritos o no
+},
+{
+  id: 4,
+  title: "Google Code-In Finalist",
+  subtitle:
+    "First Pakistani to be selected as Google Code-in Finalist from 4000 students from 77 different countries.",
+  image: require("./assets/images/codeInLogo.webp"),
+  imageAlt: "Google Code-In Logo",
+  isFavorite: false // Nuevo campo para indicar si el logro está en favoritos o no
+},
     // Otros logros...
   ],
   display: true // Set false to hide this section, defaults to true
 };
 
+export default achievementSection;
 
 // Blogs Section
 

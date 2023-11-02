@@ -1,11 +1,15 @@
 import React, { useState } from "react";
 import AchievementCard from "../../components/achievementCard/AchievementCard";
+import achievementsData from "../../portfolio"; 
+import "./Achievement.scss"; // Estilo para el contenedor
 
-export default function Achievement({ achievements }) {
+export default function Achievement() {
+  const { achievementsCards } = achievementsData; 
   const [favorites, setFavorites] = useState([]);
 
-  const toggleFavorite = (id, isFavorite) => {
-    if (isFavorite) {
+
+  const toggleFavorite = (id) => {
+    if (favorites.includes(id)) {
       setFavorites(favorites.filter((favoriteId) => favoriteId !== id));
     } else {
       setFavorites([...favorites, id]);
@@ -13,12 +17,13 @@ export default function Achievement({ achievements }) {
   };
 
   return (
-    <div className="achievements-container">
-      {achievements.map((achievement) => (
+    <div className="achievements-container" >
+      {achievementsCards.map((achievement) => (
         <AchievementCard
           key={achievement.id}
           achievement={achievement}
-          onToggleFavorite={toggleFavorite}
+          onToggleFavorite={() => toggleFavorite(achievement.id)}
+          isFavorite={favorites.includes(achievement.id)}
         />
       ))}
     </div>
