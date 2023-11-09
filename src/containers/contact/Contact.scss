@@ -91,21 +91,32 @@
 
 .contact-form {
   background-color: #f5f5f5;
-  font-size: 16px;
+  font-size: 18px;
   padding: 20px;
   border-radius: 5px;
-  text-align: center;
+  text-align: left; /* Alinea el texto del formulario a la izquierda */
+  margin: 0 auto; /* Centra el formulario en el contenedor */
+  max-width: 600px; /* Establece un ancho máximo para el formulario */
+  margin-left: -870px;
+  margin-top: -400px;
 }
+
 
 .contact-form input,
 .contact-form textarea {
   display: block;
   margin: 10px auto;
-  width: 100%;
-  padding: 10px;
+  width: calc(100% - 20px); /* Ancho del 100% menos el espacio del padding */
+  padding: 15px; /* Aumenta el padding para aumentar el tamaño del input */
+  font-size: 18px; /* Aumenta el tamaño de la letra */
   border-radius: 5px;
-  border: none;
+  border: 1px solid #ccc; /* Agrega un borde para resaltar el input */
 }
+.contact-form input,
+.contact-form textarea {
+  text-align: left; /* Coloca el texto a la izquierda dentro del input */
+}
+
 
 .contact-form button[type="submit"] {
   background-color: #4caf50;

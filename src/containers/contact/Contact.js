@@ -10,18 +10,14 @@ import { useForm } from "react-hook-form";
 
 export default function Contact() {
   const { isDark } = useContext(StyleContext);
-
-  // Crea la función onSubmit
   const onSubmit = (data) => {
-    // Procesar los datos del formulario
   };
 
-  // Registra los campos del formulario
   const { register, handleSubmit } = useForm();
 
   return (
     <Fade bottom duration={1000} distance="20px">
-      <div className="main contact-margin-top" id="contact">
+      <div className="main contact-margin-top" id="contacto">
         <div className="contact-div-main">
           <div className="contact-header">
             <h1 className="heading contact-title">{contactInfo.title}</h1>
@@ -35,7 +31,19 @@ export default function Contact() {
               {contactInfo.subtitle}
             </p>
           </div>
+  
           <div className="contact-form-container">
+            <div className="contact-image-div">
+              {illustration.animated ? (
+                <DisplayLottie animationData={email} />
+              ) : (
+                <img
+                  alt="Man working"
+                  src={require("../../assets/images/contactMailDark.svg")}
+                ></img>
+              )}
+            </div>
+  
             <div className="contact-form">
               <form onSubmit={handleSubmit(onSubmit)}>
                 <input
@@ -56,18 +64,9 @@ export default function Contact() {
               </form>
             </div>
           </div>
-          <div className="contact-image-div">
-            {illustration.animated ? (
-              <DisplayLottie animationData={email} />
-            ) : (
-              <img
-                alt="Man working"
-                src={require("../../assets/images/contactMailDark.svg")}
-              ></img>
-            )}
-          </div>
         </div>
       </div>
     </Fade>
   );
+  
 }

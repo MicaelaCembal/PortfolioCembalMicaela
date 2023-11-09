@@ -62,7 +62,7 @@ function Header() {
             </li>
           )}
           <li>
-            <a href="#contact">Contacto</a>
+            <a href="#contacto">Contacto</a>
           </li>
           <li>
             <a href="#favorites">
