@@ -1,5 +1,6 @@
 @import "../../_globalColor";
 
+
 .experience-card {
   position: relative;
   background-color: $lightBackground2;
@@ -120,6 +121,9 @@
   padding: 1.5rem;
   margin-top: 2rem;
 }
+.color-texto {
+  color: #37d0ff; /* Cambia los colores según tus preferencias */
+}
 
 /* Media Query */
 
@@ -138,6 +142,32 @@
     width: 6.5rem;
     height: 6.5rem;
   }
+}
+.favorite-button {
+  /* Estilos para el botón de favoritos */
+  background-color: #37d0ff; /* Color de fondo */
+  color: white; /* Color del texto */
+  border: none; /* Sin bordes */
+  padding: 10px 20px; /* Espaciado interno */
+  text-align: center; /* Alineación del texto */
+  text-decoration: none; /* Sin subrayado */
+  display: inline-block; /* Mostrar como un elemento en línea */
+  font-size: 16px; /* Tamaño del texto */
+  margin: 4px 2px; /* Márgenes externos */
+  cursor: pointer; /* Cursor al pasar el mouse */
+  border-radius: 8px; /* Bordes redondeados */
+  transition: background-color 0.3s ease; /* Transición suave del color de fondo */
+}
+
+.favorite-button:hover {
+  background-color: #45a049; /* Cambio de color al pasar el mouse */
+}
+
+
+.button-container {
+  margin-top: 10px; /* Establece el margen entre los botones */
+  display: flex;
+  gap: 10px; /* Espacio entre los botones */
 }
 
 @media (max-width: 768px) {

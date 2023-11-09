@@ -1,7 +1,7 @@
-import React, { useContext } from "react";
+import React, { useContext, useState, useEffect } from "react";
+import axios from "axios"; // Importa Axios
 import "./WorkExperience.scss";
 import ExperienceCard from "../../components/experienceCard/ExperienceCard";
-import { workExperiences } from "../../portfolio";
 import { Fade } from "react-reveal";
 import StyleContext from "../../contexts/StyleContext";
 import { useFavorites } from "../../context/FavoritesContext";
@@ -9,7 +9,14 @@ import { useFavorites } from "../../context/FavoritesContext";
 export default function WorkExperience() {
   const { isDark } = useContext(StyleContext);
   const { favorites, addToFavorites, removeFromFavorites } = useFavorites();
+  const [experiences, setExperiences] = useState([]);
 
+  useEffect(() => {
+    axios.get('/proyectosDestacados.json').then((response) => {
+      console.log(response.data); 
+      setExperiences(response.data);
+    });
+  }, []); 
   const isExperienceInFavorites = (experience) => {
     return favorites.some((item) => item.company === experience.company);
   };
@@ -19,9 +26,9 @@ export default function WorkExperience() {
       <Fade bottom duration={1000} distance="20px">
         <div className="experience-container" id="workExperience">
           <div>
-            <h1 className="experience-heading">Experiences</h1>
+            <h1 className="experience-heading">Proyectos destacados</h1>
             <div className="experience-cards-div">
-              {workExperiences.experience.map((card, i) => {
+              {experiences.map((card, i) => {
                 const isFavorite = isExperienceInFavorites(card);
 
                 return (
@@ -54,7 +61,6 @@ export default function WorkExperience() {
                         </span>
                       )}
                     </div>
-
                   </ExperienceCard>
                 );
               })}
