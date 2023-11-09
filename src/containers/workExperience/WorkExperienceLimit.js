@@ -22,13 +22,13 @@ export default function WorkExperience() {
   };
 
   return (
-    <div id="creaciones">
+    <div id="proyectosDestacados">
       <Fade bottom duration={1000} distance="20px">
         <div className="experience-container" id="workExperience">
           <div>
             <h1 className="experience-heading">Proyectos destacados</h1>
             <div className="experience-cards-div">
-              {experiences.map((card, i) => {
+            {experiences.slice(0, 6).map((card, i) => {
                 const isFavorite = isExperienceInFavorites(card);
 
                 return (

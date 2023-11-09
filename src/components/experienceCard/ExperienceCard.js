@@ -9,47 +9,8 @@ export default function ExperienceCard({ cardInfo, isDark }) {
   const [colorArrays, setColorArrays] = useState([]);
   const [isImageLoaded, setIsImageLoaded] = useState(false);
   const imgRef = useRef(null);
-  const isExperienceInFavorites = favorites.some(
-    (item) => item.company === cardInfo.company
-  );
-
-  function getColorArrays() {
-    const colorThief = new ColorThief();
-    setColorArrays(colorThief.getColor(imgRef.current));
-  }
-
-  function rgb(values) {
-    return typeof values === "undefined"
-      ? null
-      : "rgb(" + values.join(", ") + ")";
-  }
-
-  useEffect(() => {
-    const colorThief = new ColorThief();
-    console.log(cardInfo);
-
-    if (isImageLoaded) {
-      setColorArrays(colorThief.getColor(imgRef.current));
-    }
-  }, [isImageLoaded, cardInfo.companylogo]);
-
-  const handleImageLoad = () => {
-    setIsImageLoaded(true);
-  };
-
-  const GetDescBullets = ({ descBullets, isDark }) => {
-    return descBullets
-      ? descBullets.map((item, i) => (
-          <li
-            key={i}
-            className={isDark ? "subTitle dark-mode-text" : "subTitle"}
-          >
-            {item}
-          </li>
-        ))
-      : null;
-  };
-
+  const isExperienceInFavorites = favorites.some((item) => item.id === cardInfo.id);
+  
   return (
     <div className={isDark ? "experience-card-dark" : "experience-card"}>
       <center>
@@ -83,13 +44,10 @@ export default function ExperienceCard({ cardInfo, isDark }) {
         >
           {cardInfo.desc}
         </p>
-        <ul>
-          <GetDescBullets descBullets={cardInfo.descBullets} isDark={isDark} />
-        </ul>
       </div>
       <center>
         <div className="button-container">
-          <Link to={`proyectoDetalle/${cardInfo.idProyecto}`}>
+          <Link to={`proyectoDestacado/${cardInfo.id}`}>
             <button
               className={`favorite-button ${isDark ? "dark-mode-text" : ""}`}
               onClick={(e) => {

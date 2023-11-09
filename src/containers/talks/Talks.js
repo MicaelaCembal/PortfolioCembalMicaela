@@ -12,7 +12,7 @@ export default function Talks() {
   }
   return (
     <Fade bottom duration={1000} distance="20px">
-      <div className="main" id="talks">
+      <div className="main" id="proyectos">
         <div className="talk-header">
           <h1 className="talk-header-title">{talkSection.title}</h1>
           <p

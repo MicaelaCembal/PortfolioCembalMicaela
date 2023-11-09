@@ -17,7 +17,6 @@ import {
 function Header() {
   const { isDark } = useContext(StyleContext);
   const { favoriteCount } = useFavorites();
-
   const viewExperience = workExperiences.display;
   const viewOpenSource = openSource.display;
   const viewSkills = skillsSection.display;
@@ -49,12 +48,7 @@ function Header() {
           )}
           {viewExperience && (
             <li>
-              <a href="#experience">Experiencia</a>
-            </li>
-          )}
-          {viewAchievement && (
-            <li>
-              <a href="#achievements">Reconocimientos</a>
+              <a href="#proyectosDestacados">Proyectos Destacados</a>
             </li>
           )}
           {viewBlog && (
@@ -64,7 +58,7 @@ function Header() {
           )}
           {viewTalks && (
             <li>
-              <a href="#talks">Charlas</a>
+              <a href="#creaciones">Mis creaciones</a>
             </li>
           )}
           <li>

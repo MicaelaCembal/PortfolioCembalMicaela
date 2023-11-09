@@ -1,6 +1,6 @@
 [
   {
-    "idProyecto": 1,
+    "id": 1,
     "role": "CEO & CO-Founder",
     "company": "DONAR+",
     "companylogo": "./src/assets/images/donarMasLogo.png",
@@ -8,7 +8,7 @@
     "desc": "Plataforma Web que ofrece nuevas oportunidades para realizar donaciones de manera segura y sencilla, la cual surge frente a la necesidad de 18 millones de personas en la Argentina viviendo en la pobreza."
   },
   {
-    "idProyecto": 2,
+    "id": 2,
     "role": "Programadora",
     "company": "Quora",
     "companylogo": "./assets/images/quoraLogo.png",
@@ -16,7 +16,7 @@
     "desc": "Plataforma Web que ofrece nuevas oportunidades para realizar donaciones de manera segura y sencilla, la cual surge frente a la necesidad de 18 millones de personas en la Argentina viviendo en la pobreza."
   },
   {
-    "idProyecto": 3,
+    "id": 3,
     "role": "Analista Funcional",
     "company": "Airbnb",
     "companylogo": "./assets/images/airbnbLogo.png",
@@ -24,7 +24,7 @@
     "desc": "Plataforma Web que ofrece nuevas oportunidades para realizar donaciones de manera segura y sencilla, la cual surge frente a la necesidad de 18 millones de personas en la Argentina viviendo en la pobreza."
   },
   {
-    "idProyecto": 4,
+    "id": 4,
     "role": "Programadora",
     "company": "Facebook",
     "companylogo": "./assets/images/facebookLogo.png",
@@ -32,7 +32,7 @@
     "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod ."
   },
   {
-    "idProyecto": 5,
+    "id": 5,
     "role": "Programadora",
     "company": "Quora",
     "companylogo": "./assets/images/quoraLogo.png",
@@ -40,7 +40,55 @@
     "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod ."
   },
   {
-    "idProyecto": 6,
+    "id": 6,
+    "role": "Ingeniera",
+    "company": "Airbnb",
+    "companylogo": "./assets/images/airbnbLogo.png",
+    "date": "Jan 2015 – Sep 2015",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod ."
+  },
+  {
+    "id": 7,
+    "role": "CEO & CO-Founder",
+    "company": "DONAR+",
+    "companylogo": "./src/assets/images/donarMasLogo.png",
+    "date": "Marzo 2023 – Present",
+    "desc": "Plataforma Web que ofrece nuevas oportunidades para realizar donaciones de manera segura y sencilla, la cual surge frente a la necesidad de 18 millones de personas en la Argentina viviendo en la pobreza."
+  },
+  {
+    "id": 8,
+    "role": "Programadora",
+    "company": "Quora",
+    "companylogo": "./assets/images/quoraLogo.png",
+    "date": "May 2017 – May 2018",
+    "desc": "Plataforma Web que ofrece nuevas oportunidades para realizar donaciones de manera segura y sencilla, la cual surge frente a la necesidad de 18 millones de personas en la Argentina viviendo en la pobreza."
+  },
+  {
+    "id": 9,
+    "role": "Analista Funcional",
+    "company": "Airbnb",
+    "companylogo": "./assets/images/airbnbLogo.png",
+    "date": "Jan 2015 – Sep 2015",
+    "desc": "Plataforma Web que ofrece nuevas oportunidades para realizar donaciones de manera segura y sencilla, la cual surge frente a la necesidad de 18 millones de personas en la Argentina viviendo en la pobreza."
+  },
+  {
+    "id": 10,
+    "role": "Programadora",
+    "company": "Facebook",
+    "companylogo": "./assets/images/facebookLogo.png",
+    "date": "June 2018 – Present",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod ."
+  },
+  {
+    "id": 11,
+    "role": "Programadora",
+    "company": "Quora",
+    "companylogo": "./assets/images/quoraLogo.png",
+    "date": "May 2017 – May 2018",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod ."
+  },
+  {
+    "id": 12,
     "role": "Ingeniera",
     "company": "Airbnb",
     "companylogo": "./assets/images/airbnbLogo.png",

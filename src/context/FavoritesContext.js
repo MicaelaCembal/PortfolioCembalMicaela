@@ -18,15 +18,26 @@ export const FavoritesProvider = ({ children }) => {
   }, [favorites]);
 
   const addToFavorites = (experience) => {
-    setFavorites([...favorites, experience]);
+    const { id, company, desc, date, companylogo, role } = experience;
+    const newFavorite = {
+      id,
+      company,
+      desc,
+      date,
+      companylogo,
+      role,
+    };
+    setFavorites([...favorites, newFavorite]);
   };
-
+  
+  
   const removeFromFavorites = (experience) => {
     const updatedFavorites = favorites.filter(
-      (item) => item.company !== experience.company
+      (item) => item.id !== experience.id
     );
     setFavorites(updatedFavorites);
   };
+  
 
   return (
     <FavoritesContext.Provider
