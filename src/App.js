@@ -19,3 +19,6 @@ const App = () => {
 };
 
 export default App;
+
+
+{/*FALTA HACER LIDNO DETALLE PROYECTO DESTACADO  */}

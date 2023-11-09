@@ -26,7 +26,7 @@ export default function WorkExperience() {
       <Fade bottom duration={1000} distance="20px">
         <div className="experience-container" id="workExperience">
           <div>
-            <h1 className="experience-heading">Proyectos destacados</h1>
+            <h1 className="experience-heading">Mis creaciones</h1>
             <div className="experience-cards-div">
               {experiences.map((card, i) => {
                 const isFavorite = isExperienceInFavorites(card);
