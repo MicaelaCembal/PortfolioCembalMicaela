@@ -1,0 +1,35 @@
+// ProyectoDestacado.scss
+
+.proyecto-destacado-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0; /* Puedes ajustar el color de fondo */
+  }
+  
+  .proyecto-destacado-content {
+    max-width: 600px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .proyecto-destacado-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333; /* Puedes ajustar el color del título */
+  }
+  
+  .proyecto-destacado-role,
+  .proyecto-destacado-date,
+  .proyecto-destacado-desc {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #666; /* Puedes ajustar el color del texto principal */
+  }
+  
+  .proyecto-destacado-desc {
+    font-style: italic;
+  }
+  
